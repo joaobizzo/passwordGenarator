@@ -47,10 +47,12 @@ elif decisao == '99':
     password = input('Digite a senha: ')
     print('password = ' + password)
 
-# add the passwordAll variable to a log file:
-with open('things/passW/passwordLog.txt', 'a') as f:
-    f.write('<br>' + plataforma + ' = ' + password + '\n')
-print("Salvo no arquivo de log!")
+
+#send to decrypted.txt
+with open('decrypted.txt', 'a') as f:
+    f.write(plataforma + ' = ' + password + '\n')
+print("Salvo no arquivo de encrypt!")
+
 
 # limpar a tela
 os.system('cls' if os.name == 'nt' else 'clear')
