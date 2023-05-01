@@ -1,3 +1,5 @@
+# WINDOWS VERSION
+
 import random
 import os
 
@@ -141,3 +143,6 @@ while True:
 
 # limpando a tela
 os.system('cls' if os.name == 'nt' else 'clear')
+
+
+# FOR LINUX:
