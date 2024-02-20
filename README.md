@@ -5,10 +5,10 @@ This program is a password generator with options to create passwords using lowe
 The generated password can be encrypted using the Caesar Cipher. The program prompts the user to enter a seed for encryption and saves the encrypted passwords to a destination file ('encrypted.txt').
 
 ## Functions
-- `pulaLinha()`: prints a blank line.
-- `linha()`: prints a line of '-' characters for readability.
-- `menu_decisao()`: displays a menu for the user to choose the password type.
-- `password_generator(decisao)`: generates the password based on the user's choice.
+- `new_line()`: prints a blank line.
+- `line()`: prints a line of '-' characters for readability.
+- `decision_menu()`: displays a menu for the user to choose the password type.
+- `password_generator(decision)`: generates the password based on the user's choice.
 - `encrypt_password(password)`: encrypts the password using the Caesar Cipher.
 - `decrypt_password(encrypted_password)`: decrypts the password using the Caesar Cipher.
 - `send_to_file(content, destin)`: saves the encrypted password to a destination file.
