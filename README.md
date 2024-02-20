@@ -1,38 +1,27 @@
+# Password Generator and Encryption
 
-# Gerador de Senhas e Encriptação
-Esse código é um gerador de senhas com opções para criar senhas com letras minúsculas, maiúsculas, números e símbolos, somente letras maiúsculas e números, ou somente letras. Além disso, há uma opção para digitar uma senha personalizada.
+This program is a password generator with options to create passwords using lowercase letters, uppercase letters, numbers, and symbols, only uppercase letters and numbers, or only letters. Additionally, it allows users to enter a custom password.
 
-A senha gerada pode ser encriptada usando a Cifra de César, um tipo de criptografia que desloca cada letra em um número fixo de posições no alfabeto.
+The generated password can be encrypted using the Caesar Cipher. The program prompts the user to enter a seed for encryption and saves the encrypted passwords to a destination file ('encrypted.txt').
 
-As senhas geradas e encriptadas são salvas em um arquivo de destino ('encrypted.txt').
+## Functions
+- `pulaLinha()`: prints a blank line.
+- `linha()`: prints a line of '-' characters for readability.
+- `menu_decisao()`: displays a menu for the user to choose the password type.
+- `password_generator(decisao)`: generates the password based on the user's choice.
+- `encrypt_password(password)`: encrypts the password using the Caesar Cipher.
+- `decrypt_password(encrypted_password)`: decrypts the password using the Caesar Cipher.
+- `send_to_file(content, destin)`: saves the encrypted password to a destination file.
 
-## Funções
-- pulaLinha(): função que imprime uma linha em branco para deixar o código mais legível.
-- linha(): função que imprime uma linha de caracteres '-' para deixar o código mais legível.
-- menu_decisao(): função que imprime um menu com as opções de tipos de senhas que o usuário pode escolher.
-- password_generator(decisao): função que gera a senha com base na opção selecionada pelo usuário.
-- encrypt_password(password): função que encripta a senha utilizando a Cifra de César.
-- decrypt_password(encrypted_password): função que desencripta a senha utilizando a Cifra de César.
-- send_to_file(content, destin): função que salva a senha encriptada em um arquivo de destino.
+## Variables
+- `min`, `max`, `num`, `sybs`: sets of characters for password generation.
+- `all`: set of all characters for complete passwords.
+- `MAXnum`: set of characters for passwords with uppercase letters and numbers.
+- `MAXmin`: set of characters for passwords with uppercase and lowercase letters.
+- `destin_file`: destination file for encrypted passwords.
 
-## Variáveis
-- min: string com todas as letras minúsculas do alfabeto.
-- max: string com todas as letras maiúsculas do alfabeto.
-- num: string com todos os dígitos de 0 a 9.
-- sybs: string com alguns símbolos especiais.
-- all: string com todas as letras maiúsculas e minúsculas, números e símbolos.
-- MAXnum: string com todas as letras maiúsculas e números.
-- MAXmin: string com todas as letras maiúsculas.
-- destin_file: nome do arquivo de destino onde as senhas encriptadas serão salvas.
+## Program Flow
+The program starts with a loop where the user can choose to generate a password, decrypt a password, or exit. If generating a password, the user selects the platform and length, and then chooses the password type. The password is then encrypted and saved to a file. If decrypting a password, the user enters the encrypted password and seed to decrypt it.
 
-## Fluxo do Programa
-O programa começa com um loop while onde é perguntado ao usuário se ele deseja gerar uma senha ou desencriptar uma senha.
-
-Se o usuário escolher gerar uma senha, o programa solicita a plataforma e a quantidade de caracteres desejados para a senha. Depois, o menu com as opções de tipos de senhas é exibido. O usuário escolhe uma opção e a senha é gerada. Em seguida, a senha é encriptada com a Cifra de César, com base em uma seed fornecida pelo usuário. Por fim, a senha encriptada é salva no arquivo de destino.
-
-Se o usuário escolher desencriptar uma senha, ele é solicitado a digitar a senha encriptada e a seed utilizada para encriptar a senha. O programa desencripta a senha e a exibe na tela.
-
-Se o usuário escolher sair do programa, o loop while é interrompido e o programa é finalizado.
-
-## Limpar a Tela
-No final do código, há uma linha que limpa a tela do terminal, dependendo do sistema operacional utilizado. No Windows, utiliza-se os.system('cls'), enquanto em outros sistemas operacionais utiliza-se os.system('clear').
+## Clearing the Screen
+At the end of the code, the screen is cleared using `os.system('cls')` for Windows and `os.system('clear')` for other operating systems.
